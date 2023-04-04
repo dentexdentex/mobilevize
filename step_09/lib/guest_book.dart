@@ -73,16 +73,19 @@ class _GuestBookState extends State<GuestBook> {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Text("attend"),
-                    Radio(
-                        value: "attend",
-                        groupValue: "gattend value",
-                        onChanged: (value) {
-                          print(value);
-                        })
-                  ],
+                Container(
+                  color: widget.attend ? Colors.green : Colors.red,
+                  child: Row(
+                    children: [
+                      const Text("Attend"),
+                      Radio(
+                          value: "attend",
+                          groupValue: "gattend value",
+                          onChanged: (value) {
+                            print(value);
+                          })
+                    ],
+                  ),
                 )],
             ),
           ),
